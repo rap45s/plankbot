@@ -50,7 +50,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
     text = event.message.text
-    sysdate = datetime.datetime.today()
+    sysdate = datetime.datetime.now().strftime("%Y/%m/%d %H:%M:%S")
     if text == 'START':
         line_bot_api.reply_message(
             event.reply_token,
