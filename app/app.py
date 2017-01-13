@@ -66,9 +66,13 @@ def handle_text_message(event):
             event.reply_token,
             TextMessage(text=text)
         )
-    elif text == 'HELP':
+    elif text == 'PLANK':
         line_bot_api.reply_message(
             event.reply_token,
             TextMessage(text=text)
         )
     else:
+        line_bot_api.reply_message(
+            event.reply_token,
+            TextMessage(text=text)
+        )
